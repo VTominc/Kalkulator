@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block vsebina %}
+
+<br>
+<br>
+
+<div class="container">
+    <h1 class="text-center">Kalkulator</h1>
+
+    <br>
+
+    <p>
+        Izraz <b>kalkulator</b> izvira iz latinske besede <i>calculus</i>, kar v prevodu pomeni "kamenček". Latinski izraz calculator je prvotno
+        označeval računalo na kamenčke (abak), v sodobnih jezikih pa kalkulalator praviloma označuje elektronsko žepno računalo. Ker je priročen
+        in preprost za uporabo, je v zadnji četrtini 20. stoletja popolnoma izpodrinil vse ostale vrste računal.
+    </p>
+
+    <br>
+
+    <h3>Izračunaj željeno aritmetično operacijo!</h3>
+
+    <p>
+        Za izvajanje osnovnih matematičnih operacij, kot so seštevanje, odštevanje, množenje, itd., uporabljajte te aritmetične operatorje v formuli:
+    </p>
+
+    <br>
+
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Aritmetični operator</th>
+                <th scope="col">Pomen</th>
+                <th scope="col">Primer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>+ (znak plus)</td>
+                <td>Seštevanje</td>
+                <td>3 + 3 = 6</td>
+            </tr>
+            <tr>
+                <td>- (znak minus)</td>
+                <td>Odštevanje</td>
+                <td>3 - 1 = 2</td>
+            </tr>
+            <tr>
+                <td>* (zvezdica)</td>
+                <td>Množenje</td>
+                <td>3 * 3 = 9</td>
+            </tr>
+            <tr>
+                <td>/ (poštevnica naprej)</td>
+                <td>Deljenje</td>
+                <td>15 / 3 = 5</td>
+            </tr>
+            <tr>
+                <td>% (modul)</td>
+                <td>Ostanek</td>
+                <td>15 % 3 = 0</td>
+            </tr>
+            <tr>
+                <td>** (dve zvezdici)</td>
+                <td>Potenciranje</td>
+                <td>3 ** 3 = 27</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <h4>Preprost kalkulator:</h4>
+
+    <p>
+        <form method="post" action="/kalkulator">
+            <div class="p-3 mb-2 bg-dark text-white">
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Prvo število:</label>
+                    <input name="firstnumber" type="text" class="form-control" id="formGroupExampleInput" placeholder="Vnesi željeno število">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Izberi aritmetični operator (+, - , *, /, **, %)</label>
+                    <input name="operation" type="text" class="form-control" id="formGroupExampleInput2" placeholder="+,-, *, /, **, %">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput3">Drugo število</label>
+                    <input name="secondnumber" type="text" class="form-control" id="formGroupExampleInput3" placeholder="Vnesi željeno tevilo">
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm">Izračun</button>
+            </div>
+        </form>
+    </p>
+</div>
+
+{% endblock vsebina %}

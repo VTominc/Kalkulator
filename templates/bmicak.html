@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+
+{% block vsebina %}
+
+<br>
+<br>
+
+<div class="container">
+    <h1 class="text-center">BMI kalkulator</h1>
+
+    <br>
+
+    <p class="text-justify">
+        <b>Indeks telesne mase</b> (<b>BMI</b> = <i>Body Mass Index</i>) je antropološka mera, ki je definirana kot telesna masa v kilogramih,
+        deljena s kvadratom telesne višine v metrih. Pri primerno prehranjenem odraslem znaša med 18,5 in 24,9 – pod 18,4 pomeni podhranjenost,
+        nad 25,0 pa prenahranjenost. Praviloma viri opredeljujejo zvečano telesno maso pri vrednostih ITM nad 25, debelost pa nad 30.
+    </p>
+
+    <br>
+
+    <p class="text-justify">
+        Svetovna zdravstvena organizacija je naredila razvrstitev vrednosti indeksa telesne mase:
+    </p>
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>#</th>
+                <th>Klasifikacija</th>
+                <th>BMI(kg/m2)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td>Nedohranjenost</td>
+                <td>&lt; 18.50</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>Normalna telesna teža</td>
+                <td>18.50–24.99</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td>Povišana telesna teža</td>
+                <td>≥ 25.00</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td>Debelost</td>
+                <td>≥ 30.00</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <br>
+
+    <h3>Izračunaj si svoj BMI:</h3>
+
+    <p>
+        <form method="post" action="/bmi">
+            <div class="p-3 mb-2 bg-dark text-white">
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Višina v metrih (npr: 1.70)</label>
+                    <input name="visina" type="text" class="form-control" id="formGroupExampleInput" placeholder="Vnesi število">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Teža v kilogramih</label>
+                    <input name="teza" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Vnesi število">
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm">Izračun</button>
+            </div>
+        </form>
+    </p>
+</div>
+
+{% endblock vsebina %}
+
+
+
+
+

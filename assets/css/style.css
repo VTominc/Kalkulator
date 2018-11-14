@@ -1,0 +1,18 @@
+body {
+    background-color: whitesmoke;
+}
+
+.jumbotron {
+    margin-top: 20px;
+    background-image: url("https://i.imgur.com/rExHZnu.jpg");
+    background-color: black;
+    background-repeat:no-repeat;
+    background-size: 45%;
+    background-position:center bottom;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    border-radius: 15px;
+}
